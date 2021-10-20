@@ -6,7 +6,7 @@ from genagg import GenAggSparse
 
 from torch_geometric.graphgym.models.layer import LayerConfig
 
-GraphConvGenAgg = patch_conv_with_aggr(GraphConv, GenAggSparse)
+GraphConvGenAgg = patch_conv_with_aggr(GraphConv, GenAggSparse())
 
 # Need to define a wrapper for GraphGym
 class GraphConvGenAggWrapper(torch.nn.Module):
